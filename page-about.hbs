@@ -1,0 +1,90 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{#about}}
+{{!-- Everything inside the #about tags pulls data from the author --}}
+
+
+<header class="site-archive-header">
+    
+    {{!-- {{> header-background background=cover_image}} Special header-image.hbs partial to generate the background image --}}
+        {{!-- <div class="inner">
+            <div class="site-header-content author-header">
+                {{#if profile_image}}
+                    <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+                {{else}}
+                    <span class="author-profile-image">{{> "icons/avatar"}}</span>
+                {{/if}}
+                <div class="author-header-content">
+                    <h1 class="site-title">{{name}}</h1>
+                    {{#if bio}}
+                        <h2 class="author-bio">{{bio}}</h2>
+                    {{/if}}
+                    <div class="author-meta">
+                        {{#if location}}
+                            <div class="author-location">{{location}}</div>
+                        {{/if}}
+                        <div class="author-stats">
+                            {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+                        </div>
+                        {{#if website}}
+                            <span class="author-social-link"><a href="{{website}}" target="_blank" rel="noopener">Website</a></span>
+                        {{/if}}
+                        {{#if twitter}}
+                            <span class="author-social-link"><a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a></span>
+                        {{/if}}
+                        {{#if facebook}}
+                            <span class="author-social-link"><a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a></span>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+</header>
+{{/about}}
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer about">
+    <div class="about">
+        <h1 class="asap-header">A$AP FABLES</h1>
+        <div class="side-header">
+            <span class="side-header-about">About</span>
+        </div>
+    </div>
+    
+    <div class="who-we-are">
+        <h2 class="header">Who we are</h2>
+        <div class="copy">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua. Adipiscing commodo 
+                elit at imperdiet. Adipiscing elit duis tristique sollicitudin nibh sit amet 
+                commodo. Tempus egestas sed sed risus. Fermentum leo vel orci porta non. 
+                Lorem ipsum dolor sit amet adipiscing elit. Lacus suspendisse faucibus 
+                interdum posuere.
+            </p>
+        </div>
+    </div>
+
+    <div class="mission">
+        <h2 class="header">Our Mission</h2>
+        <div class="copy">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua. Adipiscing commodo 
+                elit at imperdiet. Adipiscing elit duis tristique sollicitudin nibh sit amet 
+                commodo. Tempus egestas sed sed risus. Fermentum leo vel orci porta 
+                non. Lorem ipsum dolor sit amet adipiscing elit. Lacus suspendisse faucibus 
+                interdum posuere.
+            </p>
+            <p>
+                Eu mi bibendum neque egestas congue quisque. Egestas sed sed risus 
+                pretium vulputate dignissim suspendisse in. Non enim praesent elementum 
+                facilisis. Urnavolutpat lacus laoreet non. Nulla facilisi cras fermentum odio 
+                eu feugiat pretium. Molestie nunc non blandit massa enim nec dui nunc 
+                mattis. Nisi est sit amet facilisis. Facilisi etiam dignissim diam quis.
+            </p>
+        </div>
+    </div>
+
+</main>
