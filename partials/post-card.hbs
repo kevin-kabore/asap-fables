@@ -1,6 +1,7 @@
-<article class="post-card {{post_class}} {{#unless feature_image}}no-image{{else}}{{#is "home"}}{{#has index="nth:6"}}post-card-large{{/has}}{{/is}}{{/unless}}">
+
 
     {{#if feature_image}}
+    <article style="position: relative;text-align: center;" class="post-card {{post_class}} {{#unless feature_image}}no-image{{else}}{{#is "home"}}{{/is}}{{/unless}}">
     <a class="post-card-image-link" href="{{url}}">
         {{!-- This is a responsive image, it loads different sizes depending on device
         https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
@@ -14,23 +15,34 @@
             src="{{img_url feature_image size="m"}}"
             alt="{{title}}"
         />
+        <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width:100%;height:100%;background-color:rgba(0,0,0,0.6);padding:25px;">
+            <header class="post-card-header" style="color:white;font-size:20px;">
+                {{{custom_excerpt}}}
+            </header>
+
+            <section class="post-card-excerpt">
+                <p style="color:white;font-size:24px;margin-top:15px;">{{title}}</p>
+            </section>
+        </div>
     </a>
+
+    </article>
     {{/if}}
 
     <div class="post-card-content">
 
-        <a class="post-card-content-link" href="{{url}}">
+        {{!-- <a class="post-card-content-link" href="{{url}}">
 
             <header class="post-card-header">
                 {{#if primary_tag}}
                     {{#primary_tag}}
                     <div class="post-card-primary-tag">{{name}}</div>
                     {{/primary_tag}}
-                {{/if}}
-                <h2 class="post-card-title">{{title}}</h2>
+                {{/if}} 
+                <h2 class="post-card-title" style="color:white;">{{title}}</h2>
             </header>
 
-            <section class="post-card-excerpt">
+            <section class="post-card-excerpt" style="color:white;">
                 {{#if feature_image}}
                     <p>{{excerpt words="30"}}</p>
                 {{else}}
@@ -38,10 +50,10 @@
                 {{/if}}
             </section>
 
-        </a>
+        </a> --}}
 
         <footer class="post-card-meta">
-            <ul class="author-list">
+            {{!-- <ul class="author-list">
                 {{#foreach authors}}
                 <li class="author-list-item">
             
@@ -62,7 +74,7 @@
             <div class="post-card-byline-content">
                 <span>{{#has author="count:>2"}}Multiple authors{{else}}{{authors}}{{/has}}</span>
                 <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-            </div>
+            </div> --}}
         </footer>
 
     </div>{{!--/.post-card-content--}}

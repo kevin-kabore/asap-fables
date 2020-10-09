@@ -25,14 +25,28 @@ production stylesheet in assets/built/screen.css
 12. Dark Mode
 
 */
+.tags {
+    margin-top:150px;
+    margin-left:-15px;
+}
+.tags li {
+    list-style-type: none;
+}
+.tags li a {
+    color:#b4b4b4;
+    font-size: 18px;
+    text-decoration: none;
+}
 
-
+.site-main {
+    margin-top:-60px;
+}
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
 
 body {
-    background: #fff;
+    background: #000;
 }
 
 .img {
@@ -57,7 +71,7 @@ body {
 .site-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .site-main {
@@ -68,7 +82,7 @@ body {
 /* Full width page blocks */
 .outer {
     position: relative;
-    padding: 0 5vw;
+    margin: 0 5vw; 
 }
 
 /* Centered content container blocks */
@@ -95,7 +109,7 @@ body {
     .home-template .post-feed,
     .tag-template .post-feed,
     .author-template .post-feed {
-        padding: 40px 0 5vw;
+        padding: 0 0 5vw;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
     }
@@ -612,7 +626,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     flex-wrap: wrap;
     margin: 0 -20px;
     padding: 50px 0 0;
-    background: #fff;
+    background: #000;
 }
 
 .post-card {
@@ -624,7 +638,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0 0 40px;
     padding: 0 20px 40px;
     min-height: 220px;
-    border-bottom: 1px solid color-mod(var(--lightgrey) l(+12%));
+    /* border-bottom: 1px solid color-mod(var(--lightgrey) l(+12%)); */
     background-size: cover;
 }
 
@@ -654,7 +668,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-header {
-    margin: 15px 0 0;
+    margin: 50px 0 0;
 }
 
 .post-feed .no-image .post-card-content-link {
