@@ -3091,3 +3091,42 @@ Usage (In Ghost editor):
         color: color-mod(var(--green) l(+5%) s(-5%));
     }
 }
+
+
+body.page-about {
+    color: black;
+}
+
+main.about div.about {
+    text-align: center;
+    position: absolute;
+}
+
+main.about div.about a.asap-header {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+main.about div.about a.asap-header:hover {
+    color: #EAA14A;
+}
+
+
+main.about .who-we-are .header, 
+main.about .mission .header {
+    text-transform: uppercase;
+}
+
+main.about .who-we-are {
+    margin-top: 100px;
+    margin-left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.about .who-we-are h2,
+main.about .who-we-are .copy {
+    max-width: 675px;
+}
