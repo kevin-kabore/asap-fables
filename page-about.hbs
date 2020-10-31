@@ -1,7 +1,7 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
-
-{{#about}}
+{{!-- {{#is "page"}} --}}
+{{#is "page"}}
 {{!-- Everything inside the #about tags pulls data from the author --}}
 
 
@@ -41,16 +41,16 @@
             </div>
         </div> --}}
 </header>
-{{/about}}
+
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer about">
     <div class="about">
-        <a class="asap-header" href="/">
+        <a class="asap-header" href="{{@site.url}}">
             A$AP FABLES
         </a>
         <div class="side-header">
-            <img alt="ABOUT" src="/assets/header-about.png" />
+            <img alt="ABOUT" src="{{asset 'header-about.png'}}" />
             {{!-- <span class="side-header-about">About</span> --}}
         </div>
     </div>
@@ -91,3 +91,4 @@
     </div>
 
 </main>
+{{/is}}
