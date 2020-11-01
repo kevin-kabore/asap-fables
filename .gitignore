@@ -2,3 +2,5 @@ node_modules
 /assets/built/casper.js.map
 /assets/built/global.css.map
 /assets/built/screen.css.map
+.DS_Store
+/dist
