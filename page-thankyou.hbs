@@ -1,0 +1,25 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+<main id="site-main" class="site-main outer">
+    <div class="inner" style="text-align:center; margin-top:25vh;margin-bottom:15vh;">
+
+        <h1>YOUR SUBMISSION WAS SUCCESSFULLY SENT TO A$AP'S FABLES</h1>
+        <p style="margin-top:5vh;">You will receive a confirmation email at:</p>
+        <p style="margin-bottom:15vh;">useremail@mail.com</p>
+        <a href="/" class="btn black-bg">Go back home</a>
+
+    </div>
+</main>
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+<script>
+    $(function () {
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+    });
+</script>
+{{/contentFor}}

@@ -1,12 +1,18 @@
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
-<div>
+
+<style>
+    body {
+        background-color: black;
+    }
+</style>
+<div id="home">
     <div style="float: left;width: 33.33%;">
         <h1
             style="color:white;display: inline-block;transform: rotate(-90deg);font-size:35px;margin-top:100px;margin-left:-80px;">
             {{@site.title}}</h1>
-        
+
         {{#get "tags" limit="all"}}
         <ul class="tags">
             {{#foreach tags}}
@@ -18,14 +24,14 @@ into the {body} of the default.hbs template --}}
         {{/get}}
     </div>
     <div style="float: left;width: 33.33%;text-align:center;margin-top:15px;"><a href="/submit"
-            style="text-decoration:none;background-color:white; color:black;padding:5px 25px;font-weight:900;font-size:25px;">SUBMIT</a>
+            class="btn white-bg">SUBMIT</a>
     </div>
     <div style="float: right;width: 75px;text-align:right;padding-top:45px;">
-        <a
+        <a href="/Editorial"
             style="color:white;display: inline-block;transform: rotate(-90deg);font-size:20px;text-decoration:underline;">EDITORIAL</a>
     </div>
     <div style="float: right;width: 15px;text-align:right;padding-top:30px;">
-        <a
+        <a href="/About"
             style="color:white;display: inline-block;transform: rotate(-90deg);font-size:20px;text-decoration:underline;">ABOUT</a>
     </div>
 
