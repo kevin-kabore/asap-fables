@@ -2817,6 +2817,12 @@ Usage (In Ghost editor):
     background: color-mod(var(--darkgrey) l(-5%));
 }
 
+.site-footer .site-footer-content.inner {
+    max-width: none;
+    width: auto;
+    padding: 0 20px;
+}
+
 .site-footer-content {
     display: flex;
     flex-wrap: wrap;
@@ -3096,20 +3102,37 @@ Usage (In Ghost editor):
 body.page-about {
     color: black;
 }
+.page-template .site-main.about {
+    margin-top: 20px;
+}
 
 main.about div.about {
     text-align: center;
-    position: absolute;
+    width: 100%;
 }
 
 main.about div.about a.asap-header {
     text-decoration: none;
     color: black;
-    font-size: 22px;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 main.about div.about a.asap-header:hover {
     color: #EAA14A;
+}
+
+main.about div.about a.asap-header {
+    text-decoration: none;
+}
+
+main.about .side-header {
+    width: 100%;
+}
+
+main.about .side-header img {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -3119,14 +3142,28 @@ main.about .mission .header {
 }
 
 main.about .who-we-are {
-    margin-top: 100px;
-    margin-left: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: -150px;
+    margin-left: auto;
+    margin-right: 150px;
 }
 
-main.about .who-we-are h2,
-main.about .who-we-are .copy {
-    max-width: 675px;
+main.about .who-we-are h2, 
+main.about .mission h2 {
+    margin-bottom: 0.5em;
 }
+
+main.about .who-we-are, 
+main.about .mission  {
+    max-width: 800px;
+}
+
+main.about .mission { 
+    margin-left: 5%;
+    margin-top: 50px;
+}
+
+main.about .who-we-are .copy, 
+main.about .mission .copy {
+    font-size: 18px;
+    line-height: 24px;
+} 
