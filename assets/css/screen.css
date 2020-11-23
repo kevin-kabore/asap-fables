@@ -47,6 +47,7 @@ production stylesheet in assets/built/screen.css
 
 body {
     background: #000;
+    margin: 0
 }
 
 .img {
@@ -71,12 +72,13 @@ body {
 .site-wrapper {
     display: flex;
     flex-direction: column;
-    /* min-height: 100vh; */
+    min-height: 100vh;
 }
 
 .site-main {
     z-index: 100;
     flex-grow: 1;
+    padding-bottom: 4rem;
 }
 
 /* Full width page blocks */
@@ -2811,8 +2813,8 @@ Usage (In Ghost editor):
 
 .site-footer {
     position: relative;
-    padding-top: 20px;
-    padding-bottom: 60px;
+    height: 4rem;
+    padding-top: 2rem;
     color: #fff;
     background: color-mod(var(--darkgrey) l(-5%));
 }
@@ -3103,6 +3105,11 @@ body.page-about {
     color: black;
 }
 .page-template .site-main.about {
+    background-image: url(/assets/header-about.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-position-y: 44px;
     margin-top: 20px;
 }
 
@@ -3128,6 +3135,7 @@ main.about div.about a.asap-header {
 
 main.about .side-header {
     width: 100%;
+    position: absolute;
 }
 
 main.about .side-header img {
@@ -3135,30 +3143,44 @@ main.about .side-header img {
     height: auto;
 }
 
-
 main.about .who-we-are .header, 
 main.about .mission .header {
     text-transform: uppercase;
 }
 
 main.about .who-we-are {
-    margin-top: -150px;
-    margin-left: auto;
-    margin-right: 150px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 110px;
 }
+
+@media (min-width: 976px) {
+    main.about .who-we-are, 
+    main.about .mission  {
+        max-width: 52%;
+    }
+    main.about .who-we-are {
+        margin-right: 5%;
+        margin-left: auto;
+    }
+}
+@media (max-width: 975px) {
+    main.about .who-we-are { 
+        margin-right: 0;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
 
 main.about .who-we-are h2, 
 main.about .mission h2 {
     margin-bottom: 0.5em;
 }
 
-main.about .who-we-are, 
-main.about .mission  {
-    max-width: 800px;
-}
-
 main.about .mission { 
     margin-left: 5%;
+    margin-right: 5%;
     margin-top: 50px;
 }
 
