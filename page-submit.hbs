@@ -3,54 +3,54 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
-<div id="home">
-    <div style="float: left;width: 33.33%;">
-        <h1
-            style="color:black;display: inline-block;transform: rotate(-90deg);font-size:35px;margin-top:100px;margin-left:-30px;">
-            SUBMIT</h1>
-    </div>
-</div>
+<nav style="text-align:center;">
+    <a href="/" style="text-decoration:none;color:black;font-size:32px;font-weight:bold;">A$AP FABLES</a>
+</nav>
 
-<main id="site-main" class="site-main outer">
-    <div class="inner">
+<main id="site-main" class="site-main outer submit-main" style="background-image:url({{asset 'header-submit.png'}});background-repeat:no-repeat;">
+    <div class="inner" style="margin:7% 10%;">
 
 
         <!-- modify this form HTML and place wherever you want your form -->
 
         <form action="https://formspree.io/f/meqpagrn" method="POST" enctype="multipart/form-data">
             <p><label style="color:#e8962c;font-weight:bold;">
-                    NAME *<br>
-                    <input type="text" name="_replyto">
+                    NAME <span style="color:red;">*</span><br>
+                    <input type="text" name="_replyto" class="submit-input">
                 </label></p>
             <p><label style="color:#e8962c;font-weight:bold;">
-                    EMAIL *<br>
-                    <input type="text" name="_replyto">
+                    EMAIL <span style="color:red;">*</span><br>
+                    <input type="text" name="_replyto" class="submit-input">
                 </label></p>
             <p><label style="color:#e8962c;font-weight:bold;">
                     HOMETOWN<br>
-                    <input type="text" name="_replyto">
+                    <input type="text" name="_replyto" class="submit-input">
                 </label></p>
             <p><label style="color:#e8962c;font-weight:bold;">
-                    DATE WRITTEN *<br>
-                    <input type="text" name="_replyto">
+                    DATE WRITTEN <span style="color:red;">*</span><br>
+                    <input type="text" name="_replyto" class="submit-input">
                 </label></p>
             <div>
-                <div style="float: left;width: 33.33%;text-align:center;margin-top:15px;">
+                <div class="col-3">
                     <label style="font-weight:bold;">
                         <span>WRITING</span><br>
-                        <input type="file" name="upload" style="margin-top:20px;">
+                        <input type="file" name="upload-writing" style="margin-top:20px;">
                     </label>
                 </div>
-                <div style="float: left;width: 33.33%;text-align:center;margin-top:15px;">
+                <div class="col-3">
                     <label style="font-weight:bold;">
                         <span>ARTWORK</span><br>
-                        <input type="file" name="upload" multiple style="margin-top:20px;">
+                        <input type="file" name="upload-artwork" multiple style="margin-top:20px;">
+                    </label>
+                    <label style="font-weight:bold;">
+                        <span class="sr-only">artist name and title of work</span><br>
+                        <input type="text" name="upload" style="margin-top:20px; width:200px;" placeholder="artist name and title of work">
                     </label>
                 </div>
-                <div style="float: left;width: 33.33%;text-align:center;margin-top:15px;">
+                <div class="col-3">
                     <label style="font-weight:bold;">
                         <span style="margin-bottom:15px;">MUSIC</span><br>
-                        <input type="file" name="upload" style="margin-top:20px;">
+                        <input type="file" name="upload-music" style="margin-top:20px;">
                     </label>
                 </div>
             </div>
@@ -58,7 +58,7 @@ into the {body} of the default.hbs template --}}
 
 
             <div style="margin-top: 20vh; text-align:center;">
-                <button type="submit">Send</button>
+                <button type="submit" class="btn black-bg" style="border:none;">SUBMIT</button>
             </div>
             
         </form>

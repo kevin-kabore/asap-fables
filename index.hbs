@@ -10,7 +10,7 @@ into the {body} of the default.hbs template --}}
 <div id="home">
     <div style="float: left;width: 33.33%;">
         <h1
-            style="color:white;display: inline-block;transform: rotate(-90deg);font-size:35px;margin-top:100px;margin-left:-80px;">
+            style="color:white;display: inline-block;transform: rotate(-90deg);font-size:35px;margin-top:100px;margin-left:-60px;">
             {{@site.title}}</h1>
 
         {{#get "tags" limit="all"}}
@@ -38,7 +38,7 @@ into the {body} of the default.hbs template --}}
 </div>
 </div>
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
+<main id="site-main" class="site-main outer home-main">
     <div class="inner posts">
 
         <div class="post-feed">
